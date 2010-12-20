@@ -9,15 +9,26 @@ OS=`uname -s`
 
 [ -e config/server.sh ] && source config/server.sh
 
+function init_suburi_assets
+# fix a symlink corresponding to sub-uri
+{
+    find public -maxdepth 1 -type l -delete
+    sub_uri=$(./script/get_env.sh pod_uri.path)
+    if [  -n "$sub_uri" -a "$sub_uri"  != "/" ]; then
+        cd public; ln -sf . ${sub_uri##/}; cd ..
+    fi
+}
+
 function init_public
 # Create all dynamically generated files in public/ folder
 {
     bundle exec thin \
-         -d --pid log/thin.pid --address localhost --port $THIN_PORT \
-         start
+        -d --pid log/thin.pid --address localhost --port $THIN_PORT \
+        start
+    pod_url=$(./script/get_env.sh pod_url)
     for ((i = 0; i < 30; i += 1)) do
         sleep 2
-        wget -q -O tmp/server.html http://localhost:$THIN_PORT && \
+        wget -q -O tmp/server.html "$pod_url" && \
             rm tmp/server.html && break
     done
     bundle exec thin --pid log/thin.pid stop
@@ -75,14 +86,8 @@ function redis_config
         config/redis.conf
 }
 
-# Scan for -p, find out what port thin is about to use.
-args="$DEFAULT_THIN_ARGS $@"
-prev_arg=''
-for arg in $( echo $args | awk '{ for (i = 1; i <= NF; i++) print $i}')
-do
-    [ "$prev_arg" = '-p' ] && THIN_PORT="$arg"
-    prev_arg="$arg"
-done
+THIN_PORT=$(./script/get_env.sh 'local_uri.port')
+SOCKET_PORT=$(./script/get_env.sh 'socket_port')
 
 # Is someone listening on the ports already? (ipv4 only test ?)
 services=$( chk_service $THIN_PORT )
@@ -106,8 +111,6 @@ if [ -n "$services" ]; then
     echo "     $services"
     exit 64
 fi
-
-
 
 # Check if Mongo is running
 if  ! ps ax | grep -v grep | grep mongod >/dev/null
@@ -140,9 +143,10 @@ if [ ! -e 'public/stylesheets/application.css' ]; then
     exit 66
 fi
 
+init_suburi_assets
 
 mkdir -p -v log/thin/
 bundle exec ruby ./script/websocket_server.rb&
 redis-server config/redis.conf &>log/redis-console.log &
 QUEUE=* bundle exec rake resque:work&
-bundle exec thin start $args
+bundle exec thin start -p $THIN_PORT $@

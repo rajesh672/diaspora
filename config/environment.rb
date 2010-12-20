@@ -27,3 +27,11 @@ end
 # Initialize the rails application
 Diaspora::Application.initialize!
 
+# Valid as long as thin serves the assets.
+if APP_CONFIG[ :pod_uri].path != "/"
+    ActionController::Base.asset_host =
+        Proc.new{ |source, request|
+           "http://" + request.host_with_port +
+                 APP_CONFIG[ :pod_uri].path + source
+        }
+end
