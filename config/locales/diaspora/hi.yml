@@ -1,0 +1,459 @@
+#   Copyright (c) 2010, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+#   Translation by Sangeeta Kumari (sangeeta09 at gmail dot com) 	
+
+# Sample localization file for Hindi(hi). Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+hi:
+  settings: "सेटिंग्स"
+  profile: "प्रोफ़ाइल"
+  account: "खाता"
+  _services: "सेवाएँ"
+  _photos: "तस्वीर"
+  ok: "ठीक"
+  cancel: "रद्द करें"
+  delete: "मिटाएँ"  
+  or: "या"
+  ago: "%{time} पहले"
+  username: "उपयोक्तानाम"
+  email: "ईमेल"
+  password: "कूटशब्द"
+  password_confirmation: "कूटशब्द पुष्टिकरण"
+  are_you_sure: "क्या आप निश्चित हैं?"
+  fill_me_out: "हमें भरें"
+  back: "पीछे"
+  the_world: "यह दुनिया"
+  search: "खोजें"
+  new_notifications: "%{count} नई अधिसूचना"
+  no_new_notifications: "कोई नई अधिसूचना नहीं"
+  _home: "घर"
+  _comments: "टिप्पणी"
+  next: 'अगला'
+  previous: 'पिछला'
+  contacts:
+    zero:   "कोई संपर्क नहीं"
+    one:    "1 संपर्क"
+    few:    "%{count} संपर्क"
+    other:  "%{count} संपर्क"
+  new_requests:
+    zero:   "कोई नया निवेदन नहीं"
+    one:    "नवीन निवेदन!"
+    few:    "%{count} नवीन निवेदन!"
+    other:  "%{count} नवीन निवेदन!"
+
+  activemodel:
+      errors:
+          models:
+              user:
+                  attributes:
+                      person:
+                          invalid: "अमान्य है."
+                      username:
+                          taken: "पहले से लिया हुआ है."
+                      email:
+                          taken: "पहले से लिया हुआ है."
+              person:
+                  attributes:
+                      diaspora_handle:
+                          taken: "पहले से लिया हुआ है."
+              contact:
+                  attributes:
+                      person_id:
+                          taken: "इस उपयोक्ता के संपर्कों में जरूर अद्वितीय होना चाहिए."
+              request:
+                  attributes:
+                      from_id:
+                          taken: "पहले से मौजूद निवेदन की एक नक़ल मात्र है."
+  application:
+      helper:
+          unknown_person: "अनजान व्यक्ति"
+          video_title:
+              unknown: "अनजान वीडियो शीर्षक"
+          aspect_badge:
+              all_aspects: "सभी पहलू"
+  error_messages:
+      helper:
+          invalid_fields: "अमान्य क्षेत्र"
+          correct_the_following_errors_and_try_again: "निम्नलिखित त्रुटियाँ सही करें और फिर आज़माएँ."
+  layouts:
+      header:
+        view_profile: "प्रोफ़ाइल देखें"
+        edit_profile: "प्रोफ़ाइल संपादित करें"
+        account_settings: "खाता सेटिंग्स"
+        logout: "लॉगआउट"
+        blog: "ब्लॉग"
+        login: "लॉगिन"
+        code: "कोड"
+      application:
+        powered_by: "DIASPORA* द्वारा ऊर्जस्वित"
+        whats_new: "नया क्या है"
+  shared:
+      publisher:
+          posting: "पोस्टिंग..."
+          share: "साझा करें"
+          post_a_message_to: "%{aspect} में एक संदेश पोस्ट करें"
+          make_public: "सार्वजनिक बनाएँ"
+          share_with_all: "सभी पहलुओं के बीच साझा करें"
+          share_with: "%{aspect} के बीच साझा करें"
+          all: "सभी"
+          add_photos: "तस्वीर जोड़ें"
+          all_contacts: "सभी संपर्क"
+          share_with_all: "अपने सभी पहलुओं के बीच साझा करें"
+      add_contact:
+          enter_a_diaspora_username: "डायस्पोरा उपयोक्तानाम दाखिल करें:"
+          your_diaspora_username_is: "आपका डायस्पोरा उपयोक्तानाम है: %{diaspora_handle}"
+          create_request: "डायस्पोरा हैंडल से ढूँढ़ें"
+          diaspora_handle: "diaspora@handle.org"
+          know_email: "उनके ईमेल पते को जानें? आपको उन्हें आमंत्रिक करना चाहिए:
+          invites: "आमंत्रण"
+          invite_someone: "किसी को आमंत्रित करें"
+          invitations_left: "(%{count} बचे)"
+          dont_have_now: "अब आपके पास कोई अधिकार नहीं बचा है, लेकिन जल्द ही अधिक आमंत्रण आ रहे हैं!"
+          invites_closed: "आमंत्रण अभी इस डायस्पोरा पॉड पर बंद है"
+      reshare:
+          reshare: "फिर साझा करें"
+      public_explain:
+          title: "आप एक सार्वजनिक संदेश पोस्ट करने के करीब हैं!"
+          outside: "सार्वजनिक संदेश डायस्पोरा के बाहर दूसरों के द्वारा देखे जाने के लिए उपलब्ध रहेंगे."
+          logged_in: "%{service} में लॉगिन"
+          manage: "कनेक्टेड सेवाएँ प्रबंधित करें"
+      notification:
+          new: "%{type} नया %{from} से"
+      contact_list:
+          all_contacts: "सभी संपर्क"
+          cannot_remove: "व्यक्ति को अंतिम पहलू से हटा नहीं सकता है. (यदि आप इस व्यक्ति से डिसकनेक्ट होना चाहते हैं तो आपको जरूर संपर्क हटाना चाहिए.)"
+  aspects:
+      all_aspects_contacts:
+          all_contacts: "सभी संपर्क"
+          manage_aspects: "पहलू प्रबंधित करें"
+          aspects: "पहलू"
+          no_contacts: "आपके पास अभी कोई संपर्क नहीं हैं.  अपने संपर्क यहाँ ढूँढ़ें."
+      aspect_contacts:
+          done_editing: "संपादन संपन्न"
+      show:
+          edit_aspect: "पहलू संपादित करें"
+      no_contacts_message:
+          nobody: "उनलोगों को लाएँ जो डायस्पोरा में आपकी जीवन के लिए महत्वपूर्ण हैं!"
+          nobody_in_aspect: "आपके पहलू '%{aspect_name}' रिक्त हैं."
+          add_contact: "कोई संपर्क जोड़ें"
+          add_contact_to: "%{aspect_name} में किसी को जोड़ें"
+          invite: "डायस्पोरा में शामिल होने के लिए किसी को आमंत्रित करें!"
+      no_posts_message:
+          start_talking:  "किसी ने अभी तक कुछ नहीं कहा है.  बातचीत जारी रखें!"
+      manage:
+          add_a_new_aspect: "नवीन पहलू जोड़ें"
+          add_a_new_contact: "नया संपर्क जोड़ें"
+          requests: "निवेदन"
+          no_requests: "कोई नवीन निवेदन नहीं"
+          manage_aspects: "पहलू प्रबंधित करें"
+          drag_to_add: "लोगों को जोड़ने के लिए खीचें"
+      new_aspect:
+          name: "नाम"
+          create: "बनाएँ"
+      create:
+          success: "आपका नया पहलू %{name} बनाया गया"
+          failure: "पहलू निर्माण विफल."
+      destroy:
+          success: "%{name} को सफलतापूर्वक हटाया गया."
+      update:
+          success: "आपके पहलू, %{name}, का सफलतापूर्वक संपादन किया गया."
+          failure: "आपके पहलू, %{name}, का नाम इतना लंबा है कि सहेजा नहीं जा सकता है."
+      move_contact:
+          failure: "%{inspect} काम नहीं किया"
+          success: "व्यक्ति नए पहलू में चला गया"
+          error: "संपर्क खिसकाने में त्रुटि: %{inspect}"
+      add_to_aspect:
+          failure: "पहलू में संपर्क जोड़ने में विफल."
+          success: "पहलू में संपर्क सफलतापूर्वक जोड़ा."
+      helper:
+          remove: "हटाएँ"
+          aspect_not_empty: "पहलू रिक्त नहीं"
+          are_you_sure: "क्या आप वाकई इस पहलू को मिटाना चाहते हैं?"
+      remove_from_aspect:
+          success: "पहलू से व्यक्ति को सफलतापूर्वक हटाया"
+          failure: "पहलू से व्यक्ति को हटाने में विफल"
+      seed:
+          family: "परिवार"
+          work: "कार्य"
+      index:
+          handle_explanation: "यह आपका डायस्पोरा हैंडल है. बतौर एक ईमेल पता की तरह आप इसे लोगों को आपतक पहुँचने के लिए दे सकते हैं."
+      edit_aspect_pane:
+          remove_aspect: "यह पहलू मिटाएँ"
+          confirm_remove_aspect: "क्या आप वाकई इस पहलू को मिटाना चाहते हैं?"
+          add_existing: "कोई मौजूदा संपर्क जोड़ें"
+  notifications:
+      request_accepted: "आपके साझा निवेदन को स्वीकार किया."
+      new_request: "आपके साथ साझा करने के लिए प्रस्तुत."
+      comment_on_post: "टिप्पणी की गई आपके"
+      post: 'पोस्ट पर'
+      deleted: 'मिटाया गया'
+      index:
+        notifications: "अधिसूचना"
+  users:
+      edit:
+          export_data: "आँकड़ा भेजें"
+          close_account: "खाता बंद करें"
+          change_language: "भाषा बदलें"
+          change_password: "कूटशब्द बदलें"
+          new_password: "नया कूटशब्द"
+          download_xml: "मेरा xml डाउनलोड करें"
+          download_photos: "मेरी तस्वीरें डाउनलोड करें"
+          your_handle: "आपका डायस्पोरा हैंडल"
+          your_email: "आपका ईमेल"
+          edit_account: "खाता संपादित करें"
+          email_notifications: "ईमेल अधिसूचना"
+          receive_email_notifications: "ईमेल अधिसूचना पाएँ?"
+          change: "बदलें"
+      destroy: "खाता सपलतापूर्वक बंद."
+      getting_started:
+          welcome: "डायस्पोरा में आपका स्वागत है!"
+          signup_steps: "इन तीन चरणों को पूरा कर अपना साइन अप समाप्त करें:"
+          edit_profile: "अपना प्रोफ़ाइल संपादित करें"
+          define_aspects: "अपने पहलुओं को परिभाषित करें"
+          connect_services: "अपनी दूसरी सेवाओं से कनेक्ट करें"
+          finished: "समाप्त!"
+          skip: "आरंभन छोड़कर आगे बढ़ें"
+          save_and_continue: "सहेजें और जारी रखें"
+          step_2:
+              your_aspects: "आपके पहलू"
+              description: "Tell Diaspora what different aspects of you are seen by different contacts. You can manage these later through your account menu at the top right. Your aspects are unique to you and not visible by others."
+              aspect_name: "पहलू नाम"
+              add: "Add"
+              your_inviter: "Here are the people who are waiting for you:"
+              drag_to_add:  "Drag them to the aspect of yourself they know"
+              no_requests: "आपके पास कोई निवेदन नहीं हैं"
+          step_3:
+              your_services: "आपकी सेवाएँ"
+              description: 'You are able to connect your existing social networks to your Diaspora account. You will be able to post publically through your Home page when you select “make public"'
+          step_4:
+              set_up: "आप पूरी तरह से तैयार हैं, %{name}!"
+              ready_to_share: "You're now ready to start sharing with "
+              continue: "Continue on to your Home page, an overview of all of your aspects."
+              change_profile: "You can edit your profile and manage your connected services at any time through "
+              user_menu: "the user menu located at the top right."
+              manage_aspects: "You can also add contacts while on any aspect page."
+              finish: "Finish"
+      update:
+          password_changed: "कूटशब्द बदला गया"
+          password_not_changed: "कूटशब्द बदलना विफल"
+          language_changed: "भाषा परिवर्तित"
+          language_not_changed: "भाषा बदलना विफल"
+          email_notifications_changed: "ईमेल अधिसूचना परिवर्तित"
+      public:
+          does_not_exist: "%{username} उपयोक्तानाम मौजूद नहीं है!"
+  comments:
+      new_comment:
+          comment: "टिप्पणी"
+          commenting: "टिप्पणी कर रहा है..."
+          press: "press"
+          enter: "enter"
+          to_comment: "टिप्पणी में"
+  photos:
+      show:
+          delete_photo: "तस्वीर मिटाएँ"
+          make_profile_photo: "प्रोफाइल तस्वीर बनाएँ"
+          update_photo: "तस्वीर अद्यतन करें"
+          view: "दृश्य"
+          edit: "संपादन"
+          edit_delete_photo: "Edit photo description / delete photo"
+          permalink: "पर्मालिंक"
+          view_original_post: "मूल पोस्ट देखें"
+      edit:
+          editing: "संपादन कर रहा है"
+      photo:
+          view_all: "%{name} की सभी तस्वीरें देखें"
+      new:
+          new_photo: "नई तस्वीर"
+          back_to_list: "सूची में वापस जाएँ"
+          post_it: "इसे पोस्ट करें!"
+      create:
+          runtime_error: "Photo upload failed.  Are you sure that your seatbelt is fastened?"
+          integrity_error: "Photo upload failed.  Are you sure that was an image?"
+          type_error: "Photo upload failed.  Are you sure an image was added?"
+      update:
+          notice: "तस्वीर सफलतापूर्वक अद्यतन."
+          error:  "तस्वीर संपादित करना विफल."
+      destroy:
+          notice: "तस्वीर मिटायी गई."
+      new_photo:
+          invalid_ext: "{file} has invalid extension. Only {extensions} are allowed."
+          size_error: "{file} is too large, maximum file size is {sizeLimit}."
+          empty: "{file} is empty, please select files again without it."
+      new_profile_photo:
+          upload: "Upload a new profile photo!"
+          or_select_one: "or select one from your already existing"
+  registrations:
+      new:
+          sign_up: "साइन अप"
+          sign_up_for_diaspora: "डायस्पोरा के लिए साइन अप करें"
+          enter_email: "ईमेल दाखिल करें"
+          enter_username: "उपयोक्तानाम चुनें (केवल अक्षर, संख्या, और अंडरस्कोर)"
+          enter_password: "कूटशब्द दाखिल करें"
+          enter_password_again: "पहले के समान कूटशब्द दाखिल करें"
+      create:
+          success: "आप डायस्पोरा में शामिल हो गए हैं!"
+      edit:
+          edit: "%{name} संपादित करें"
+          leave_blank: "(leave blank if you don't want to change it)"
+          password_to_confirm: "(we need your current password to confirm your changes)"
+          unhappy: "नाखुश?"
+          update: "अद्यतन करें"
+          cancel_my_account: "मेरा खाता रद्द करें"
+      closed: "Signups are closed on this Diaspora pod."
+  invitations:
+      create:
+          sent: "Invitations have been sent to: "
+          rejected: "The following email addresses had problems: "
+          no_more: "आपके पास अब कोई आमंत्रण नहीं है."
+          already_sent: "आपने पहले ही इस व्यक्ति को आमंत्रित किया है."
+          already_contacts: "आप पहले से इस व्यक्ति से कनेक्टेड हैं" 
+      new:
+          invite_someone_to_join: "डायस्पोरा में शामिल होने के लिए किसी को आमंत्रित करें!"
+          if_they_accept_info: "if they accept, they will be added to the aspect you invited them."
+          comma_seperated_plz: "You can enter multiple email addresses separated by commas."
+          to: "To"
+          personal_message: "व्यक्तिगत संदेश"
+          send_an_invitation: "कोई आमंत्रण भेजें"
+          send_invitation: "आमंत्रण भेजें"
+          aspect: "पहलू"
+          already_invited: "पहले से आमंत्रित"
+      check_token:
+          not_found: "आमंत्रण टोकन नहीं मिला"
+      edit:
+          sign_up: "sign_up"
+  status_messages:
+      new_status_message:
+          tell_me_something_good: "मुझे कुछ अच्छा सुनाएँ"
+          oh_yeah: "अच्छा हाँ!"
+      show:
+          destroy: "मिटाएँ"
+          permalink: "पर्मालिंक"
+      helper:
+          no_message_to_display: "दिखाने के लिए कोई संदेश नहीं."
+  people:
+      person:
+          pending_request: "लंबित अनुरोध"
+          already_connected: "पहले से कनेक्टेड"
+          thats_you: "वह आप हैं!"
+          add_contact: "संपर्क जोड़ें"
+      index:
+          results_for: "इनके लिए परिणाम खोजें"
+          no_results: "Hey! You need to search for something."
+          couldnt_find_them_send_invite: "Couldn't find them?  Send an invite!"
+          no_one_found: "...and no one was found."
+      webfinger:
+          fail: "Sorry, we couldn't find %{handle}."
+      show:
+          no_posts: "no posts to display!"
+          incoming_request: "You have an incoming request from this person."
+          return_to_aspects: "Return to your aspects page"
+          to_accept_or_ignore: "to accept or ignore it."
+          does_not_exist: "Person does not exist!"
+          not_connected: "You are not sharing with %{name}"
+          recent_posts: "Recent Posts"
+          recent_public_posts: "Recent Public Posts"
+          similar_contacts: "similar contacts"
+      edit:
+          info_available_to: "This info will be available to whomever you connect with on Diaspora."
+          your_profile: "आपकी प्रोफ़ाइल"
+          your_name: "आपका नाम"
+          first_name: "पहला नाम"
+          last_name: "अंतिम नाम"
+          your_gender: "आपका लिंग"
+          your_birthday: "आपका जन्मदिन"
+          your_bio: "आपकी जीवनवृत्त"
+          your_photo: "आपकी तस्वीर"
+          update_profile: "प्रोफ़ाइल अद्यतन करें"
+          allow_search: "Allow for people to search for you within Diaspora"
+          edit_profile: "प्रोफ़ाइल संपादित करें"
+      update:
+          updated: "प्रोफ़ाइल अद्यतन करें"
+          failed: "प्रोफ़ाइल अद्यतन में विफल"
+      profile_sidebar:
+          remove_contact: "संपर्क हटाएँ"
+          edit_my_profile: "मेरा प्रोफाइल संपादित करें"
+          bio: "जीवनवृत्त"
+          gender: "लिंग"
+          born: "जन्मदिन"
+          in_aspects: "पहलू में"
+          cannot_remove: "Cannot remove %{name} from last aspect. (If you want to disconnect from this person you must remove contact.)"
+          remove_from: "Remove %{name} from %{aspect}?"
+      helper:
+           results_for: " %{params} के लिए परिणाम"
+           people_on_pod_are_aware_of: " people on pod are aware of"
+      share_with:
+           share_with: "Start sharing with %{name}"
+           accepts: "Once %{name} accepts, you'll start seeing each other's posts on Diaspora"
+      aspect_list:
+           edit_membership: "edit aspect membership"
+  requests:
+      manage_aspect_contacts:
+          manage_within: "Manage contacts within"
+          existing: "Existing contacts"
+      destroy:
+          success: "You are now friends."
+          error: "Please select an aspect!"
+          ignore: "Ignored contact request."
+      create:
+          sending: "भेज रहा है"
+          sent: "You've asked to share with %{name}.  They should see it next time they log in to Diaspora."
+      new_request_to_person:
+          sent: "भेजा गया!"
+  services:
+      index:
+        logged_in_as: "लॉगिन बतौर"
+        disconnect: "डिसकनेक्ट"
+        really_disconnect: "%{service} से डिसकनेक्ट करें?"
+        connect_to_twitter: "ट्विटर में कनेक्ट करें"
+        connect_to_facebook: "फेसबुक से कनेक्ट करें"
+        edit_services: "सेवाएँ संपादि करें"
+      create:
+          success: "सत्यापन सफल."
+      destroy:
+          success: "सफलतापूर्वक सत्यापन मिटाया गया."
+      failure:
+          error: "there was an error connecting that service"
+  notifier:
+      hello: "%{name} नमस्कार!"
+      love: "सप्रेम,"
+      thanks: "शुक्रिया,"
+      diaspora: "डायस्पोरा ईमेल रोबोट"
+      single_admin:
+          subject: "A message about your Diaspora account:"
+          admin: "Your Diaspora administrator"
+      new_request:
+          subject: "new Diaspora* contact request from %{from}"
+          just_sent_you: "just sent you a contact request on Diaspora*"
+          try_it_out: "You should really think about checking it out."
+          sign_in: "sign in here"
+      request_accepted:
+          subject: "%{name} has accepted your contact request on Diaspora*"
+          accepted: "has accepted your contact request!"
+  home:
+      show:
+          share_what_you_want: "Share what you want, with whom you want."
+          tagline_first_half: "Share what you want,"
+          tagline_second_half: "with whom you want."
+          already_account: "already have an account?"
+          login_here: "log in here"
+          choice: "Choice"
+          choice_explanation: "Diaspora lets you sort your connections into groups called aspects. Unique to Diaspora, aspects ensure that your photos, stories and jokes are shared only with the people you intend."
+          ownership: "Ownership"
+          ownership_explanation: "You own your pictures, and you shouldn’t have to give that up just to share them. You maintain ownership of everything you share on Diaspora, giving you full control over how it's distributed."
+          simplicity: "Simplicity"
+          simplicity_explanation: "Diaspora makes sharing clean and easy – and this goes for privacy too. Inherently private, Diaspora doesn’t make you wade through pages of settings and options just to keep your profile secure."
+          learn_about_host: "Learn about how to host your own Diaspora server."
+  stream_helper:
+      show_comments: "सभी टिप्पणी दिखाएँ"
+      hide_comments: "टिप्पणी छिपाएँ"
+  webfinger:
+      fetch_failed: "failed to fetch webfinger profile for %{profile_url}"
+      hcard_fetch_failed: "there was a problem fetching the hcard for %{account}"
+      xrd_fetch_failed: "there was an error getting the xrd from account %{account}"
+      not_enabled: "webfinger does not seem to be enabled for %{account}'s host"
+      no_person_constructed: "No person could be constructed from this hcard."
+  pagination:
+      next: "अगला"
+      previous: "पिछला"
